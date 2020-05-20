@@ -3,11 +3,22 @@
 \usepackage{titlesec}
 \usepackage{marvosym} % add the symbols for email and phone contact data
 \usepackage{fancyhdr} % Required for the footer
-\usepackage{tabularx} % Nicer table style than the default
+\usepackage{ltablex} % Tables with justified columns. long tabularx
+\usepackage{tabularx,lipsum}% Nicer table style than the default
 %% Little  modif
+\usepackage[document]{ragged2e}
 \usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
 \usepackage{fontawesome}
+
+
+\usepackage{paratype}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 \usepackage[T1]{fontenc}
+
+%% The font package uses mweights.sty which has som issues with the
+%% \normalfont command. The following two lines fixes this issue.
+\let\oldnormalfont\normalfont
+\def\normalfont{\oldnormalfont\mdseries}
 \definecolor{headings}{HTML}{000000} % Dark red color for headings
 \definecolor{text1}{HTML}{000000} % Main document font color, off-black
 
@@ -45,6 +56,9 @@
 \usepackage{pdfpages}
 \usepackage{comment}
 \usepackage[outline]{contour}
+\usepackage{blindtext}
+
+%% External Link
 \newcommand{\ExternalLink}{%
 	\tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
 		\begin{scope}[x=1ex, y=1ex]
@@ -81,10 +95,10 @@
 %\renewcommand\theadfont{\normalsize\bfseries}
 %\renewcommand{\arraystretch}{1}
 % Sections formatting
-%\titleformat{\section}{\fontfamily{qtm}\fontseries{m}\fontshape{n}\selectfont\color{headings}\scshape\huge\centering}{}{0em}{}[\vspace*{-0.667\baselineskip}\color{black}\textbf{}
+%\titleformat{\section}{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\selectfont\color{headings}\scshape\huge\centering}{}{0em}{}[\vspace*{-0.667\baselineskip}\color{black}\textbf{}
 %{\titlerule[2pt]}]
 
-\titleformat{\section}{\fontfamily{qtm}\scshape\huge\centering}{}{0em}{}[\color{black}{\titlerule[.2pt]}]
+\titleformat{\section}{\fontfamily{\sfdefault}\scshape\huge\centering}{}{0em}{}[\color{black}{\titlerule[.1pt]}]
 
 %\titleformat{\section}{%
 %	\Large\scshape\raggedright}{}{4.5em}{}%
@@ -95,7 +109,7 @@
 
 
 \usepackage{lastpage}
-\usepackage{fancyhdr}
+%\usepackage{fancyhdr}
 \pagestyle{fancy} 
 \cfoot{\thepage\ of \pageref{LastPage}}
 % %%%% Prevents overfull hbox and vbox
@@ -129,103 +143,72 @@
 %%%%%%  NAME AND CONTACT  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{center}
-
-\color{headings}\textsc{\Huge{\so{Oday Darwich}}}, 28 YO, \small{Trilingual: French, English and Arabic}\\
-\vspace{1mm}
+\color{headings}{\Huge{\so{\textbf{Oday Darwich}}}}\\
+28 YO,\hfill {\small\faMapMarker} Cologny/Geneva, 1223 
 \color{text1}{\large\Telefon} +41 (0)76 753 9203 
-\hfill {\large\faMapMarker} Cologny/Geneva, 1223 
-\hfill {\large\faEnvelope} \href{mailto:oday@zeeroday.com}{oday@zeeroday.com} 
+\hfill {\small\faEnvelope} \href{mailto:oday@zeeroday.com}{oday@zeeroday.com} 
 \hfill \color{text1}{\large\faGithub} \href{https://github.com/zeeroday}{github.com/zeeroday}
-\hfill \faLink{ \href{https://www.linkedin.com/in/oday/}{zeeroday.ch}}
+\hfill\small\faLink{ \href{https://www.linkedin.com/in/oday/}{zeeroday.ch}}
 
-\rule{\textwidth}{2pt}
+\rule{\textwidth}{.1pt}
 
 %%%  Introduction about the offer
 \vspace{-5pt}
 \begin{flushleft}
-	\textbf{Computer Scientist, Research \& Innovation Engineer}  with various experiences in design, innovation and conceptualization. Most of my work is at the overlap of innovation/deep tech. \textit{I believe that we are essentially social creatures and we achieve our greatest aspirations when we work together, not as individuals}
-\end{flushleft}
-\begin{center}
+	\textbf{Computer Scientist, Research \& Innovation Engineer}  with various experiences in design, innovation and conceptualization. Most of my work is at the overlap of innovation/deep tech. \textit{I believe that we are essentially social creatures and we achieve our greatest aspirations when we work together, not as individuals}\\ \vspace{1.1mm}
 %%
-\textbf{\fontsize{11pt}{11}\selectfont Diverse Placements}: I performed technical software developments in areas including:
-
-\fcolorbox{white}{Gray}{
-	\begin{minipage}[t]{0.20\textwidth}
-		\centering Optimization Algorithm
-		Data Analysis
-\end{minipage}}
-\space
-\fcolorbox{white}{Gray}{
-\begin{minipage}[t]{0.20\textwidth}
-\centering Software development life cycle
-\end{minipage}}
-\space
-\fcolorbox{white}{Gray}{
-\begin{minipage}[t]{0.20\textwidth}
-	\centering Conceptualization
-	Modeling
-\end{minipage}}
-\space
-\fcolorbox{white}{Gray}{
-\begin{minipage}[t]{0.20\textwidth}
-	\centering Full Stack Development
-	Relational Database
-\end{minipage}}
-\end{center}
-%\space 
-%\fcolorbox{white}{Gray}{
-%\begin{minipage}[t]{0.30\textwidth}
-%	4 block of text
-%	first block of text
-%\end{minipage}}
-
-\begin{flushleft} 
-
-	\uline{\fontfamily{qtm}\fontsize{10pt}{10}\selectfont Software Development Skills:} {Cloud Platform (AWS),  Data Structure and Algorithm, Git, Emacs, Jupiter Notebook, UNIX, Networking basics, Asana, Trello}\\
-		\uline{\fontfamily{qtm}\fontsize{10pt}{10}\selectfont Problem Solving Skills:} {Interpersonal skills, Design thinking \& collective intelligence practices, Logical thinking \& Lobbying, Leadership, Active listening \& Flexibility}\\
-		\uline {\fontfamily{qtm}\fontsize{10pt}{10}\selectfont Computer programming and coding:} {Python, Ruby on Rails, JavaScript, C\#\/.Net, ASP.net, MySql, PostgresSQL, HTML, CSS, JavaScript, jQuery, Django, Telerik, Jira, BugTracker, VBA, UML, Matlab, Haskell$^{\divideontimes} $, Emacs, Atom IDE, Visual Studio}\\
-		\uline {\fontfamily{qtm}\fontsize{10pt}{10}\selectfont Operating Systems:} {Debian GNU/Linux, Windows, macOS} \hspace{2cm} \uline {\fontfamily{qtm}\fontsize{10pt}{10}\selectfont Framework:} {Scrum, Lean} \\
+\textbf{Diverse Placements}: I performed technical software developments in areas including:
+\vspace{-6mm}
 \end{flushleft}
+%\begin{center}
+\begin{tabularx}{\textwidth}{||X||X|| X|| X||}
 
-%%%%%%  EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\FloatBarrier
-%\floatplacement{figure}{H}
-\vspace{-6ex}
+		\rowcolor{Gray}
+		Optimization Algorithm Data Analysis, RDBMS& 
+		Software development life cycle, Scrum, Lean & 
+		Conceptualization Modeling  & 
+		Full Stack Development
+\end{tabularx}
+
+%%%%%%  Professional Experience  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+\floatplacement{figure}{H}
+\vspace{-9mm}
 \section{Professional Experience}
-\renewcommand{\arraystretch}{0.9}
-\vspace{-4ex}
+\renewcommand{\arraystretch}{1}
+\vspace{-3ex}
 \begin{table}[H]
 	\begin{adjustwidth}{-.6mm}{-0,5cm}
 		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
-				\multicolumn{2}{C{536pt}}{
+				\multicolumn{2}{L{536pt}}{
 				{\textbf{\href{https://home.cern/}{European Council for Nuclear Research (CERN)} - \href{https://ideasquare.cern/content/about}{IdeaSquare} 
-						{\space\small\faMapMarker}} \small{Geneva, Jan 2018 - Present (2 year 4 mths)}}} \\
-					\multicolumn{2}{C{536pt}}{
-						{\textbf{\hlcyan{Design \& Innovation Engineer in Deep Tech - Researcher \& Serial Learner}} }} \\
-			\multicolumn{2}{L{536pt}}{$\odot$ \uline{Research \& Innovation Development:} Designed a novel solution, called \textit{New Alexandria} for collaborative documentation of breakthrough innovations using Distributed Ledger Technology, ML \& Graph Search Algorithms} \\
-			\multicolumn{2}{L{536pt}}{$\odot$ \uline{Collaboration Establishment:} Established different collaboration with NGOs, Corporations and International organizations, of which a collaboration between Akasha Foundation and CERN IdeaSquare for a \EUR{1} million grant }\\
-			\multicolumn{2}{L{536pt}}{$\odot$ \uline{Design and Facilitation Support:} Designed, organized and facilitated senior international workshop using collective intelligence and design thinking tools}\\
-			\multicolumn{2}{L{536pt}}{$\odot$ \uline{Business intelligence analysis:} Co-designed and engineered a 5 year strategy for CERN IdeaSquare}\\ \\
+						{\space\small\faMapMarker}} \small{Geneva, Jan 2018 - Present}}} \\
+					\multicolumn{2}{L{536pt}}{
+						{\textbf{\hlcyan{Design \& Innovation Engineer in Deep Tech - Researcher \& Serial Learner}} }}\\
+			\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Research \& Innovation Development:} Designed a novel solution, called \textit{New Alexandria} for collaborative documentation of breakthrough innovations using Distributed Ledger Technology, ML \& Graph Search Algorithms} \\
+			\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Collaboration Establishment:} Established different collaboration with NGOs, Corporations and International organizations, of which a collaboration between Akasha Foundation and CERN IdeaSquare for a \EUR{1} million grant }\\
+			\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Design and Facilitation Support:} Designed, organized and facilitated senior international workshop using collective intelligence and design thinking tools}\\
+			\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Business intelligence analysis:} Co-designed and engineered a 5 year strategy for CERN IdeaSquare}\\ \\
 	\end{tabular}
 
 		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
 	\multicolumn{2}{L{536pt}}{
-		\centering{\textbf{\href{https://www.unige.ch/}{University of Geneva}-/-\href{https://www.citizencyberlab.org/}{Citizen CyberLab}}  {\space\small\faMapMarker} \small{Geneva, Switzerland}, 2017 to 2019, 35\%, (2 year 2 mths)}} \\
-	\multicolumn{2}{C{536pt}}{
+		{\textbf{\href{https://www.unige.ch/}{University of Geneva}-/-\href{https://www.citizencyberlab.org/}{Citizen CyberLab}}  {\space\small\faMapMarker} \small{Geneva, Switzerland}, 2017 to 2019, 35\%}} \\
+	\multicolumn{2}{L{536pt}}{
 		{\textbf{\hlcyan{Reseaerch Assistant and Program Coordinator} }}} \\
-					\multicolumn{2}{L{536pt}}{$\odot$ \uline{Research and Assessment:}{ Assessed \& Researched more than 15 online existing documentation platform and surveyed users experiences to find the best way to docuemnt online}} \\
-					\multicolumn{2}{L{536pt}}{$\odot$ \uline{Reporting \& Analysis:} {Produced a research investigation report and recommendations for future development }} \\ 
-					\multicolumn{2}{L{536pt}}{$\odot$ \uline{Software Development:} Adapted a collaborative online documentation platform from MIT called \href{www.sdginprogress.com}{SDGinProgress}. Programmed and maintained the code  in  \texttt{\hlcyan{Ruby on Rails, jQuery, JavaScript, PostgresSQL, solr search engine}} } \\ \\
+					\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Research and Assessment:}{ Assessed \& Researched more than 15 online existing documentation platform and surveyed users experiences to find the best way to docuemnt online}} \\
+					\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Reporting \& Analysis:} {Produced a research investigation report and recommendations for future development }} \\ 
+					\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Software Development:} Adapted a collaborative online documentation platform from MIT called \href{www.sdginprogress.com}{SDGinProgress}. Programmed and maintained the code  in  \texttt{\hlcyan{Ruby on Rails, jQuery, JavaScript, PostgresSQL, solr search engine}} } \\ \\
 \end{tabular}
 
 		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
 	\multicolumn{2}{L{536pt}}{
-		\centering{\textbf{\href{https://www.ert.com/}{eResearch Technology, Inc.}} {\space\small\faMapMarker} \small{Geneva, Switzerland}, 2016 to 2017,  50\%, (1 year 1 month)}} \\
-	\multicolumn{2}{C{536pt}}{
+		{\textbf{\href{https://www.ert.com/}{eResearch Technology, Inc.}} {\space\small\faMapMarker} \small{Geneva, Switzerland}, 2016 to 2017,  50\%}} \\
+	\multicolumn{2}{L{536pt}}{
 		{\textbf{\hlcyan{Junior Software Developer and Project Manager Assistant}} }} \\
 	
-	\multicolumn{2}{L{536pt}}{$\odot$ \uline{Testing, Analysis and Concept Engineering:} {Tested, Analysed and reviewed} the existing \texttt{Excel VBA} solutio. I also framed the project, collected and the data, \& selected actions based on user needs \& preferences} \\ 	
-	\multicolumn{2}{L{536pt}}{$\odot$ \uline{Software Development and Team Management:} {Build an } automatized web app system ( {MVP} )  in collaboration with 2 full stack developers; tested it with users and {reported future recommendation} for further development. MVP was build using \texttt{\hlcyan{Functional Design, UML Modeling, Macro VBA, Python, Django, MySQL, HTML, CSS, JS}}} \\  \\
+	\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Testing, Analysis and Concept Engineering:} {Tested, Analysed and reviewed} the existing \texttt{Excel VBA} solutio. I also framed the project, collected and the data, \& selected actions based on user needs \& preferences} \\ 	
+	\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Software Development and Team Management:} {Build an } automatized web app system ( {MVP} )  in collaboration with 2 full stack developers; tested it with users and {reported future recommendation} for further development. MVP was build using \texttt{\hlcyan{Functional Design, UML Modeling, Macro VBA, Python, Django, MySQL, HTML, CSS, JS}}} \\  \\
 \end{tabular}
 %\end{adjustwidth}
 %\end{table}
@@ -233,11 +216,11 @@
 %	\begin{adjustwidth}{-.6mm}{-0.5cm}
 		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
 	\multicolumn{2}{L{536pt}}{
-	\centering{\textbf{\href{https://www.weforum.org/}{World Economic Forum}} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Mar 2016 to June 2016, 40\%, (4 mths)}} \\
-	\multicolumn{2}{C{536pt}}{
+	{\textbf{\href{https://www.weforum.org/}{World Economic Forum}} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Mar 2016 to June 2016, 40\%}} \\
+	\multicolumn{2}{L{536pt}}{
 	{\textbf{\hlcyan{Data Migration Engineer}}  }} \\
 	
-	\multicolumn{2}{L{536pt}}{$\odot$ \uline{Software Development:} {Developed} and resolved the backup. I {restored} the data from old system and did the data migration for the new iOS system {{using the following technologies:} \texttt{\hlcyan{Python, MySQL, OS, MS-Office, ATOM IDE}}}} \\ \\
+	\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Software Development:} {Developed} and resolved the backup. I {restored} the data from old system and did the data migration for the new iOS system {{using the following technologies:} \texttt{\hlcyan{Python, MySQL, OS, MS-Office, ATOM IDE}}}} \\ \\
 \end{tabular}
 %\end{adjustwidth}
 %\end{table}
@@ -245,16 +228,25 @@
 %	\begin{adjustwidth}{-.6mm}{-0.5cm}
 		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
 	\multicolumn{2}{L{536pt}}{
-	\centering{\textbf{\href{https://www.vinci-energies.ch/de/}{VINCI Energies} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Mar 2013 to Aug 2013, Thesis Project (6 mths)}}} \\
-	\multicolumn{2}{C{536pt}}{
+	{{\href{https://www.vinci-energies.ch/de/}{VINCI Energies} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Mar 2013 to Aug 2013, Thesis Project}}} \\
+	\multicolumn{2}{L{536pt}}{
 		{\textbf{\hlcyan{Junior Technical Project Manager}}  }} \\
-	\multicolumn{2}{L{536pt}}{$\odot$ \uline{Concept Engineering:} Researched and well-conceptualized an Internal Enterprise Content Management web app system that replaced Lotus. I {collaborated} with a team of full stack web developers to {develop the solution}. I {tested} it and {created} a user friendly tutorials for more than 80 users. I used for the latter, \texttt{\hlcyan{VB.net, Jira and SmartSheet}}} \\ \\
-	\multicolumn{2}{L{536pt}}{{{{}  \textbf{Chairmen and Organizer} of \textit{Beyond Quantum Technologies \& AI panel at AI4Good Summit \textsuperscript{\href{https://aiforgood.itu.int/}{\ExternalLink}}}\hfill {\space\faMapMarker} \small{2020}}}}\\
-	\multicolumn{2}{L{536pt}}{{{{}  \textbf{Consultant for ITU} \textsuperscript{\href{https://www.itu.int/en/ITU-T/focusgroups/qit4n/Pages/default.aspx}{\ExternalLink}}on Innovation in Quantum Tech.. I submitted reports \& recommendation \textsuperscript{\href{https://www.itu.int/en/ITU-T/focusgroups/qit4n/Pages/default.aspx}{\ExternalLink QT Group}}\hfill {\space\faMapMarker} \small{2019}}}}\\
-	\multicolumn{2}{L{536pt}}{{{{}  \textbf{Consultant for the U.S. Mission to the UN} \textsuperscript{\href{https://usun.usmission.gov/mission/}{\ExternalLink}} on the organization and setting up a world wide Hackathon \textsuperscript{\href{http://www.zoohackathon.com/Geneva}{\ExternalLink}}\hfill {\space\faMapMarker} \small{2019}}}}\\
+	\multicolumn{2}{L{536pt}}{$\odot$ \textbf{Concept Engineering:} Researched and well-conceptualized an Internal Enterprise Content Management web app system that replaced Lotus. I {collaborated} with a team of full stack web developers to {develop the solution}. I {tested} it and {created} a user friendly tutorials for more than 80 users. I used for the latter, \texttt{\hlcyan{VB.net, Jira and SmartSheet}}} \\ \\
+	\hline \vspace{2mm}
 \end{tabular}
 	\end{adjustwidth}
 \end{table}
+
+\vspace{-10mm}
+\begin{flushleft} 
+
+	\textbf{\fontfamily{\sfdefault}\fontsize{10pt}{10}\selectfont Software Development Skills:} {Cloud Platform (AWS),  Data Structure and Algorithm, Git, Emacs, UNIX, Scrum, Lean}\\ 
+	\textbf{\fontfamily{\sfdefault}\fontsize{10pt}{10}\selectfont Problem Solving Skills:} {Interpersonal skills, Design thinking \& collective intelligence practices, Lobbying, Leadership}\\
+	\textbf {\fontfamily{\sfdefault}\fontsize{10pt}{10}\selectfont Computer programming and coding:} {Python, Ruby on Rails, JavaScript, C\#\/.Net, ASP.net, MySql, PostgresSQL, HTML, CSS, JavaScript, jQuery, Django, Telerik, Jira, BugTracker, VBA, UML, Matlab, Haskell$^{\divideontimes} $, Emacs, Atom IDE, Visual Studio}\\
+\end{flushleft}
+
+\begin{comment}
+
 
 \vspace{-4ex}
 \section{Internship}%\vspace{-36pt}
@@ -291,19 +283,19 @@
 
 \end{adjustwidth}
 \end{table}
-
+\end{comment}
 %\end{figure}
 %%%%%%  Education  %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-6ex}
+%\vspace{-10ex}
 \section{Education}
-\vspace{-4ex}
-\begin{table}[H]\renewcommand{\arraystretch}{0.6}
+\vspace{-3ex}
+\begin{table}[H]\renewcommand{\arraystretch}{0.9}
 	\begin{adjustwidth}{-.6mm}{-0.5cm}
 		\begin{tabular}
 			{>{\raggedright}m{137.3mm}
 				>{\raggedleft\arraybackslash}m{4.5cm}}
 				\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{\href{https://www.unige.ch/sciences/en/larecherche/domainesderecherche/informatique/}{University of Geneva}}, \href{https://www.unige.ch/sciences/en/larecherche/domainesderecherche/informatique/}{M.Sc. Computer Science} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Nov. 2018}}\\
+				{\textbf{\href{https://www.unige.ch/sciences/en/larecherche/domainesderecherche/informatique/}{University of Geneva}}, \href{https://www.unige.ch/sciences/en/larecherche/domainesderecherche/informatique/}{M.Sc. Computer Science} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Nov. 2018}}\\
 				\multicolumn{2}{L{536pt}}{{$\odot$ \uline{Specialties}: {Algorithms and Parallel Computing, Stochastic Information Processing, Semantics, Modeling \& Verification, Theoretical Computer Science, Machine Learning, Data Mining and Information Retrieval}}}\\ 
 				\multicolumn{2}{L{536pt}}{{$\odot$ \uline{Research \& Development}: {Submitted a thesis on \textit{Comparing Digital Platforms for Challenge-based Learning}}}}\\\\
 				
@@ -313,7 +305,7 @@
 			{>{\raggedright}m{137.3mm}
 				>{\raggedleft\arraybackslash}m{4.5cm}}
 							\multicolumn{2}{L{536pt}}{
-								\centering{\textbf{\href{https://www.univ-littoral.fr/formation/offre-de-formation/masters/master-instrumentation-mesure-metrologie-electronique-et-instrumentation/}{University of the Littoral Opal Coast}}, \href{https://www.univ-littoral.fr/formation/offre-de-formation/masters/master-instrumentation-mesure-metrologie-electronique-et-instrumentation/}{M.Sc. Electrical  Engineering} {\space\small\faMapMarker} \small{Lille, France}, Aug. 2014}} \\
+								{\textbf{\href{https://www.univ-littoral.fr/formation/offre-de-formation/masters/master-instrumentation-mesure-metrologie-electronique-et-instrumentation/}{University of the Littoral Opal Coast}}, \href{https://www.univ-littoral.fr/formation/offre-de-formation/masters/master-instrumentation-mesure-metrologie-electronique-et-instrumentation/}{M.Sc. Electrical  Engineering} {\space\small\faMapMarker} \small{Lille, France}, Aug. 2014}} \\
 								\multicolumn{2}{L{536pt}}{{$\odot$ \uline{Specialties}: {Digital electronics, , Optoelectronics, Electromechanics, 	Electromagnetism}}}\\ \\
 		\end{tabular}
 		
@@ -321,7 +313,7 @@
 			{>{\raggedright}m{137.3mm}
 				>{\raggedleft\arraybackslash}m{4.5cm}}
 			\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{\href{http://tsi.univ-littoral.fr/}{University of the Littoral Opal Coast}}, \href{http://tsi.univ-littoral.fr/}{M.Sc. Industrial Information Technology} {\space\small\faMapMarker} \small{Lille, France}, Aug. 2013}} \\
+				{\textbf{\href{http://tsi.univ-littoral.fr/}{University of the Littoral Opal Coast}}, \href{http://tsi.univ-littoral.fr/}{M.Sc. Industrial Information Technology} {\space\small\faMapMarker} \small{Lille, France}, Aug. 2013}} \\
 				\multicolumn{2}{L{536pt}}{{$\odot$ \uline{Specialties}: {Industrial data processing, Predictive analytics, modelling, Signal \& Image Processing}}}\\ \\
 		\end{tabular}
 		\begin{tabular}
@@ -329,7 +321,7 @@
 				>{\raggedleft\arraybackslash}m{4.5cm}}
 			
 			\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{\href{https://iut.ul.edu.lb/ccne.php}{Lebanese University}}, \textbf{\href{https://iut.ul.edu.lb/ccne.php}{B.Sc. Computer \& Communicat$^{\circ} $ Networks Engineering}}{\space\small\faMapMarker} \small{Beirut, Lebanon}, Aug. 2012}} \\
+				{\textbf{\href{https://iut.ul.edu.lb/ccne.php}{Lebanese University}}, \textbf{\href{https://iut.ul.edu.lb/ccne.php}{B.Sc. Computer \& Communicat$^{\circ} $ Networks Engineering}}{\space\small\faMapMarker} \small{Beirut, Lebanon}, Aug. 2012}} \\
 				\multicolumn{2}{L{536pt}}{{$\odot$ \uline{Research}: {Submitted a thesis on\textit{ Simulation by cellular automata for natural risk management}}}}\\
 		\end{tabular}
 		
@@ -339,16 +331,16 @@
 
 %%%%%%  EMPLOYMENT  %%%%%%%%%%%%%%%
 \vspace{-6ex}
-\section{Entrepreneurial Experiences}
-\renewcommand{\arraystretch}{0.8}
-\vspace{-4ex}
+\section{Entrepreneurial Experiences\textsubscript{2017 to 2019}}
+\renewcommand{\arraystretch}{0.9}
+\vspace{-2ex}
 \begin{table}[H]
 	\begin{adjustwidth}{-.6mm}{-0.5cm}
 		\begin{tabular}
 			{>{\raggedright}m{137.3mm}
 				>{\raggedleft\arraybackslash}m{4.5cm}}
 			\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{Founder} of \textbf{\href{https://indico.cern.ch/e/thequantumfuture}{The Quantum FutureX Initiative}}} - {\space\faMapMarker} \small{Geneva, CH}, 2019} \\
+				{\textbf{Founder} of \textbf{\href{https://indico.cern.ch/e/thequantumfuture}{The Quantum FutureX Initiative}}} } \\
 			\multicolumn{2}{L{536pt}}{
 				{{{\space\small$\rtimes$} QFX is an open initiative for forward-thinking people to step forward and
 						collaborate on creating the futures of quantum. It brings hardcore scientists, creatives and industry members to work together on high risk, high reward projects}}}\\
@@ -356,67 +348,73 @@
 				{{{\space\small$\divideontimes$} \textbf{Established} collaborations with IBM, Alphabet (Google X), CERN, EPFL, ITU, State of Geneva. \textbf{Onboarded} more top people for the board of the association from Europe and the US and \textbf{Raised multiple funding} for QFX}}}\\
 			\\
 			\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{Founder} of \textbf{\href{https://indico.cern.ch/e/mobilityhack2019}{The Mobility Hackathon Community}}} - {\space\faMapMarker} \small{Geneva, CH}, 2018} \\
-				\multicolumn{2}{L{536pt}}{
-					{{{\space\small$\rtimes$} A large gathering that brings a diverse range of perspectives, and ignite the flow of ideas between different members of society that focuses on the intersection of digital technology and urbanization with more inclusive perspective for mobility}}}\\
-				\multicolumn{2}{L{536pt}}{
+				{\textbf{Founder} of \textbf{\href{https://indico.cern.ch/e/mobilityhack2019}{The Mobility Hackathon Community}}}} \\
+%				\multicolumn{2}{L{536pt}}{
+%					{{{\space\small$\rtimes$} A large gathering that brings a diverse range of perspectives, and ignite the flow of ideas between different members of society that focuses on the intersection of digital technology and urbanization with more inclusive perspective for mobility}}}\\
+			\multicolumn{2}{L{536pt}}{
 	{{{\space\small$\divideontimes$} \textbf{Established} collaborations with CERN, Univeristy of Geneva, ABA foundation, ITU, Ai4Good Summit. \textbf{Onboarded} more top people for the Jury from various industry and research labs and \textbf{Raised funding}}}}\\
 			\\
 						\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{Initiated a collaboration} for \href{https://akasha.org/blog/2019/03/06/akasha-at-cern/}{New Alexandria}, \EUR{1} Million EU project \textsuperscript{\href{https://ec.europa.eu/research/eic/index.cfm?pg=prizes_blockchains}{\ExternalLink}}} - {\space\faMapMarker} \small{Geneva, CH}, 2018} \\
-			\multicolumn{2}{L{542pt}}{
-				{{{\space\small$\rtimes$} A collaboration between Akasha Foundation \textsuperscript{\href{https://akasha.org/blog/2019/03/06/akasha-at-cern}{\ExternalLink}} and CERN to build an  online platform based on Akasha DApp to co-create \& participate in science project while fully recognizing individual contributions with a system based on Blockchain.}}}\\ \\
+				{ \textbf{Initiated a collaboration} for \href{https://akasha.org/blog/2019/03/06/akasha-at-cern/}{New Alexandria}, \EUR{1} Million EU project \textsuperscript{\href{https://ec.europa.eu/research/eic/index.cfm?pg=prizes_blockchains}{\ExternalLink}}} } \\ \\
 			
-			 \multicolumn{2}{L{546pt}}{{{{\space\small$\rtimes$}  \textbf{Organizer} of Physics Meets Blockchain Workshop for open source development \& blockchain at CERN\textsuperscript{\href{https://indico.cern.ch/event/736583/}{\ExternalLink}}\hfill {\space\faMapMarker} \small{Geneva, 2018}}}}\\
+			 \multicolumn{2}{L{536pt}}{{{ \textbf{Organizer} of Physics Meets Blockchain Workshop for open source development \& blockchain at CERN\textsuperscript{\href{https://indico.cern.ch/event/736583/}{\ExternalLink}}}}}\\ \\
+	\multicolumn{2}{L{536pt}}{{{{}  \textbf{Chairmen and Organizer} of \textit{Beyond Quantum Technologies \& AI panel at AI4Good Summit \textsuperscript{\href{https://aiforgood.itu.int/}{\ExternalLink}}}}}}\\ \\
+\multicolumn{2}{L{536pt}}{{{{}  \textbf{Consultant for ITU} \textsuperscript{\href{https://www.itu.int/en/ITU-T/focusgroups/qit4n/Pages/default.aspx}{\ExternalLink}}on Innovation in Quantum Tech.. I submitted reports \& recommendation \textsuperscript{\href{https://www.itu.int/en/ITU-T/focusgroups/qit4n/Pages/default.aspx}{\ExternalLink QT Group}}}}}\\ \\
+\multicolumn{2}{L{536pt}}{{{{}  \textbf{Consultant for the U.S. Mission to the UN} \textsuperscript{\href{https://usun.usmission.gov/mission/}{\ExternalLink}} on the organization and setting up a world wide Hackathon \textsuperscript{\href{http://www.zoohackathon.com/Geneva}{\ExternalLink}}}}}\\
 		\end{tabular}
 	\end{adjustwidth}
 \end{table}
-\vspace{-6ex}
-\section{Public Speaking Engagements}
-\renewcommand{\arraystretch}{0.4}
 \vspace{-4ex}
+\section{Public Speaking Engagements}
+\renewcommand{\arraystretch}{0.9}
+\vspace{-2ex}
 \begin{table}[H]
 	\begin{adjustwidth}{-.6mm}{-0.5cm}
 		\begin{tabular}
 			{>{\raggedright}m{137.3mm}
 				>{\raggedleft\arraybackslash}m{4.5cm}}
 			\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{\href{https://www.itu.int/en/ITU-T/Workshops-and-Seminars/2019060507/Pages/default.aspx}{The Quantum Future, Innovation and Community}}}}\\
+				{\textbf{\href{https://www.itu.int/en/ITU-T/Workshops-and-Seminars/2019060507/Pages/default.aspx}{The Quantum Future, Innovation and Community}}}}\\
 			\multicolumn{2}{L{536pt}}{{{The International Telecommunication Union\textsuperscript{\href{https://www.itu.int/en/ITU-T/focusgroups/qit4n/Pages/default.aspx}{\ExternalLink}} workshop on Quantum Information Technology \hfill {\space\small\faMapMarker} \small{Shanghai, China}, 2019}}}\\
 			\\
 			\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{\href{https://phys.au.dk/en/news/item/artikel/talk-oday-darwich-cerns-quantum-initiative-a-vision-for-blockchain-for-open-innovation-and-edu/}{CERN Quantum Initiative \& Vision for Blockchain for Open Innovation} }}} \\
+				{\textbf{\href{https://phys.au.dk/en/news/item/artikel/talk-oday-darwich-cerns-quantum-initiative-a-vision-for-blockchain-for-open-innovation-and-edu/}{CERN Quantum Initiative \& Vision for Blockchain for Open Innovation} }}} \\
 			\multicolumn{2}{L{536pt}}{{{Aarhus University, Department of Physics and Astronomy \textsuperscript{\href{https://phys.au.dk/en/}{\ExternalLink}}, private talk for senior researchers\hfill {\space\small\faMapMarker} \small{Aarhus, Denmark}}, 2019}}\\
 			\\
 			\multicolumn{2}{L{536pt}}{
-				\centering{\textbf{\href{https://www.isid.co.jp/english/news/release/2018/pdf/0911.pdf}{Future Emerging Technologies}}}} \\
+				{\textbf{\href{https://www.isid.co.jp/english/news/release/2018/pdf/0911.pdf}{Future Emerging Technologies}}}} \\
 			\multicolumn{2}{L{536pt}}{{{Table Unstable KYOTO SCIENCE OUTREACH \textsuperscript{\href{https://www.itu.int/en/ITU-T/focusgroups/qit4n/Pages/default.aspx}{\ExternalLink}} workshop on Quantum Computers \& Blockchain\hfill{\space\small\faMapMarker} \small{Tokyo, Japan}}, 2018}}\\
 			\\
+\begin{comment}
 			\multicolumn{2}{L{536pt}}{\
 				\centering{\textbf{\href{https://www.meetup.com/Swiss-CyberSecurity/events/239125256/}{Blockchain Introduction, Ethereum and Security Challenges}\textsuperscript{{\textbf{PPT \& essay \href{https://drive.google.com/open?id=1vvP7ChjCR269b4bFAvrK9pKcvre642Sk}{here}}}}}}} \\
+
 			\multicolumn{2}{L{536pt}}{{{Chaired the meetup with Prof. Bryan Ford \textsuperscript{\href{https://bford.info/}{\ExternalLink}}, leader of  EPFL Decentralized/Distributed Systems lab \hfill {\space\faMapMarker} \small{Geneva}, 2017}}}\\
+\end{comment}
 			
 		\end{tabular}
 	\end{adjustwidth}
 \end{table}
 
 %%%%%%  Entrepreneurial Experiences  %%%%%%%%%%%%%%%
-\vspace{-4ex}
+\vspace{-6ex}
 \begin{minipage}[t]{0.48\textwidth}
 %	\vspace{0pt} % Trick for alignment
 	
 
 	%%%%%%  ICT SKILLS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\vspace{-2ex}
+	\vspace{-4ex}
 	\section{Community Activities}
+		\vspace{-4ex}
 	\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
 %		\textbf{Debate}   & AGeneva Debate Club \\
 %		\textbf{Other Software}   & All Microsoft Office programmes, Adobe Suite, \LaTeX, some \textsc{html} \\
 %		\textbf{Systems}          & Linux, Windows, Mac, Unix \\
 			\multicolumn{2}{L{250pt}}{{{2015 - Present : Geneva Debate Club \textsuperscript{\href{https://www.clubdedebat.ch/}{\ExternalLink}}}}}\\
 			\multicolumn{2}{L{250pt}}{{{2018 - Present : CERN Entrepreneurship Meetups \textsuperscript{\href{https://www.clubdedebat.ch/}{\ExternalLink}}}}}\\
-			\multicolumn{2}{L{250pt}}{{{2016 - 2018 \hspace{12pt}: Swiss Cyber-Security meetup \textsuperscript{\href{https://swiss-cybersecurity.ch/}{\ExternalLink}}}}}\\\\
-			\multicolumn{2}{L{536pt}}{{{{\large\textbf{\uuline{References:}}} Prof. John Ellis \textsuperscript{\href{https://en.wikipedia.org/wiki/John_Ellis_(physicist)}{\ExternalLink}}, Dr. Markus Nordberg \textsuperscript{\href{https://nordberg.web.cern.ch/}{\ExternalLink}}, Dr. Fran\c{c}ois Grey \textsuperscript{\href{https://en.wikipedia.org/wiki/John_Ellis_(physicist)}{\ExternalLink}}, Dr. Ben Segal \textsuperscript{\href{https://internethalloffame.org/inductees/ben-segal}{\ExternalLink}}
+			\multicolumn{2}{L{250pt}}{{{2016 - 2018 \hspace{12pt}: Swiss Cyber-Security meetup \textsuperscript{\href{https://swiss-cybersecurity.ch/}{\ExternalLink}}}}}\\ \\
+			\multicolumn{2}{L{259pt}}{{{\uline {\fontfamily{\sfdefault}\fontsize{10pt}{10}\selectfont {Operating Systems:}} {Debian GNU/Linux, Windows, macOS} \hspace{2cm} \uline {} \textsuperscript{}}}}\\
+			\multicolumn{2}{L{536pt}}{{{{\large\textbf{\uuline{\textbf{References}:}}} Prof. John Ellis \textsuperscript{\href{https://en.wikipedia.org/wiki/John_Ellis_(physicist)}{\ExternalLink}}, Dr. Markus Nordberg \textsuperscript{\href{https://nordberg.web.cern.ch/}{\ExternalLink}}, Dr. Fran\c{c}ois Grey \textsuperscript{\href{https://en.wikipedia.org/wiki/John_Ellis_(physicist)}{\ExternalLink}}, Dr. Ben Segal \textsuperscript{\href{https://internethalloffame.org/inductees/ben-segal}{\ExternalLink}}
 			
 		}}}\\
 	\end{tabularx}
@@ -429,16 +427,17 @@
 	
 	
 	%%%%%%  AWARDS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\vspace{-2ex}
+	\vspace{-4ex}
 	\section{MOOC \& Recent Learning} 
-	
+	\vspace{-4ex}
 	\begin{tabularx}{1\linewidth}{>{\raggedright\scshape}p{1cm}X}
 %		\textbf{2011}    & University Education Network Awards \\
 %		\textbf{2009}    & First Aid Certification, British Red Cross \\
 %		\textbf{2008}    & Full UK Driving Licence \\ 
 %		\textbf{2007}    & 200+ Hours Millennium Volunteer Award \\
 			\multicolumn{2}{L{250pt}}{{{\textbf{Learning}: MIT Quantum Information Science I, II \textsuperscript{\href{http://web.mit.edu/cua/www/8.371/}{\ExternalLink}}}}}\\
-			\multicolumn{2}{L{250pt}}{{{\textbf{Reading}: InvestED			\textsuperscript{\href{https://www.goodreads.com/en/book/show/34950854-invested}{\ExternalLink}}, Quantum Computations and Quantum Information \textsuperscript{\href{https://g.co/kgs/S29VDN}{\ExternalLink}}, How to Design Programs \textsuperscript{\href{https://www.goodreads.com/book/show/1119079.How_to_Design_Programs}{\ExternalLink}}}}}\\
+			\multicolumn{2}{L{250pt}}{{{\textbf{Reading}: InvestED			\textsuperscript{\href{https://www.goodreads.com/en/book/show/34950854-invested}{\ExternalLink}}, Quantum Computations and Quantum Information \textsuperscript{\href{https://g.co/kgs/S29VDN}{\ExternalLink}}, How to Design Programs \textsuperscript{\href{https://www.goodreads.com/book/show/1119079.How_to_Design_Programs}{\ExternalLink}}}}}\\ \\
+			\multicolumn{2}{L{259pt}}{{{\uline {\fontfamily{\sfdefault}\fontsize{10pt}{10}\selectfont {Trilingual:}} {French, English and Arabic} }}}\\
 
 
 	\end{tabularx}
