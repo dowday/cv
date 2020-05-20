@@ -1,0 +1,354 @@
+%edited version of eversion (because last one is over loaded)
+%\documentclass[a4paper, 11pt]{article}
+\documentclass[a4paper,12pt]{article}
+\include{packages}
+\usepackage[utf8]{inputenc}
+%% Sections formatting
+\usepackage{titlesec}				%custom \section
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+
+
+%\titlespacing{\section}{5pt}{5pt}{5pt} 
+
+%% Background image
+\usepackage{wallpaper}
+
+%% Latex Icon 
+\usepackage{fontawesome}
+
+\usepackage{multirow}
+%\newcommand{\sr}{\rule[0mm]{-2pt}{-10mm}} % Setting single row height with multirow 
+%\renewcommand{\baselinestretch}{1mm}  %spacing between lines
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{array}
+
+\SpecialCoor
+\newcommand*{\authorimg}[1]{%
+  \raisebox{-0.1\baselineskip}{%
+    \includegraphics[
+      height=0.8\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+\newcommand*{\authorimgpg}[1]{%
+  \raisebox{1\baselineskip}{%
+    \includegraphics[
+      height=100\baselineskip,
+      width=\baselineskip,
+      keepaspectratio,
+    ]{#1}%
+  }%
+}
+\usepackage{float}
+            
+\restylefloat{table}
+\usepackage{placeins}
+\usepackage{array, caption, floatrow, tabularx, makecell, booktabs}%
+\captionsetup{labelfont = sc}
+%\setcellgapes{2pt}
+%\usepackage{adjustbox}
+\usepackage{arydshln}
+%\usepackage{showframe}
+%\definecolor{rowcolora}{rgb}{0.95, 0.95, 0.96}%Anti-flash white
+%\definecolor{rowcolora}{rgb}{1.0, 0.98, 0.94}% 0.96Floral white
+%\definecolor{rowcolora}{rgb}{1.0, 1.0, 0.94}
+%\definecolor{rowcolora}{rgb}{0.96, 0.96, 0.96}
+%\definecolor{rowcolora}{rgb}{0.83, 0.83, 0.90}
+\definecolor{rowcolora}{rgb}{240, 245, 245}
+%almond {0.98, 0.92, 0.84}{0.98, 0.92, 0.84}
+
+
+%% Frame box around text 
+
+\newcommand{\myboxedtext}[2][rectangle,draw,fill=white,rounded corners]{%
+            \tikz[baseline=-1ex] \node [#1,rounded corners]{#2};}%
+            
+%% to put en cours word over a word 
+\usepackage{stackengine}
+
+\usepackage{makecell}
+\usepackage{setspace}
+
+\begin{document}
+
+%\setlength{\extrarowheight}{-10pt}
+
+\pagenumbering{gobble}
+
+
+{\color{black}{\textsc{\large{\so{\textbf{DARWICH  Mohammad Oday}}}}
+\hspace{10mm}Lebanese, 
+25 YO
+%\authorimg{../icon/./drivericona.png} International
+
+{\color{black}{\Large\authorimg{../icon/telephoneauricularicon.eps}}} \link{tel:+41767539203}{+41 76 753 9203} | \hspace{1mm}{\color{bostonuniversityred}{{\authorimg{../icon/envelope.eps}}}} \hspace{1mm}{\color{mail}{\href{mailto:oday.darwich@cern.ch}{oday.darwich@cern.ch}}} |
+\hspace{1mm}{\color{bostonuniversityred}{\authorimg{../icon/locationplaceholder.eps} }} Cologny/Geneva} | Permit B student\\
+
+% I am a Hacker-Freak and fast learner. I am looking to work in a place surrounded by innovative and efficient people, where innovation and making stuff works are their main goals.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% > Education
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5} 
+\fontsize{11}{12}{\selectfont
+\begin{tabular}[t]{ m{180mm}}
+
+\multicolumn{1}{c}{\color{black}\scshape\LARGE\raggedright \textbf{Education} }\\ 
+
+\hline
+%% > Geneva University
+\rowcolor{rowcolora}
+\textbf{University of Geneva}\hfill Geneva
+
+\rowcolor{rowcolora} \textit{MSc in Computer Science}
+%\authorimg{../icon/locationplaceholder.eps} University of Geneva, Geneva  
+\hfill on going}\\
+\vspace{1.2mm}
+
+%% > Littoral France
+\rowcolor{rowcolora}\textbf{University of the Littoral Opal Coast}\hfill France
+
+\rowcolor{rowcolora} \textit{MSc Electronic \& Instrumentation \textit{(3 semester)}}
+%\authorimg{../icon/locationplaceholder.eps} University of Geneva, Geneva  
+\hfill September 2014}\\
+\vspace{1.2mm}
+
+%% > Littoral France
+\rowcolor{rowcolora}
+\textbf{University of the Littoral Opal Coast}\hfill France
+
+\rowcolor{rowcolora} \textit{MSc Image Signal Processing $\textit{(2 semester)}}$
+%\authorimg{../icon/locationplaceholder.eps} University of Geneva, Geneva  
+\hfill September 2013}\\
+\vspace{1.2mm}
+
+%% > Littoral France
+\rowcolor{rowcolora}
+\textbf{Lebanese University}\hfill Lebanon
+
+\rowcolor{rowcolora} \textit{B.S. Computer \& Communication Networks Engineering}
+%\authorimg{../icon/locationplaceholder.eps} University of Geneva, Geneva  
+\hfill June 2012}\\
+\end{tabular}
+}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% >  Working Experience
+%\vspace*{-6mm}
+\begin{table}[H]
+\renewcommand{ \arraystretch}{2} %heigh of each row
+\fontsize{11}{12}{\selectfont
+\begin{tabular}[t]{ m{180mm}}
+\multicolumn{1}{c}{\color{black}\scshape\LARGE\raggedright \textbf{Work Experience}}\\ 
+\hline
+\rowcolor{rowcolora}\textbf{CERN IdeaSquare} $\sim$ \textit{Serial Learner} \hfill  {Currently}
+
+\begin{itemize}
+    \item[-]{Exploration and Discovery of the new blockchain universal tool!
+    \href{https://home.cern/}{\color{blue}{CERN IdeaSquare}}
+\end{itemize}
+\rowcolor{rowcolora}\textbf{SDG in Progress} $\sim$ \textit{Software development} \hfill  {Currently}
+
+\begin{itemize}
+    \item[-]{Working on the Version 2.0 of a platform called Build in Progress developed by MIT media Lab, the aim is to find the best way to capture the value of Open Innovation projects.
+\href{https://www.sdginprogress.com/}{\color{blue}{SDG in Progress}}
+\end{itemize}
+
+\rowcolor{rowcolora}\textbf{ERT - Healthcare company} $\sim$ \textit{Project Assistant \& Software Development} \hfill  {2017}
+
+\begin{itemize}
+    \item[-]{Automatization of the system (Modeling, Specifications etc..)} and VBA software development 
+    \item[-] Interface development  for the macros VBA 
+\end{itemize}
+
+\rowcolor{rowcolora}\textbf{Sustainable Development Goals Summer School} $\sim$ \textit{Mentor} \hfill  {Juillet - Août}
+
+\begin{itemize}
+    \item[-]{Mentoring the projects of the students, work with them together to document their ideas in useful way where people who are interested could learn and continue what the students have done during the \href{http://gt-initiative.org/summerschool/}{\color{blue}{SDG summer school}} between Geneva and China
+\end{itemize}
+
+\rowcolor{rowcolora}\textbf{Co-organizer of the \href{http://opengenevahackathons.org/}{\color{blue}{Open Geneva Hackathon}}} \hfill Geneva  (2017)
+\begin{itemize}
+\item[-] A festival of hackathon organized for the first time in Geneva where we managed to do more than 20 Hackathon at same time around Geneva 
+\end{itemize}
+\vspace{1.2mm}
+
+\rowcolor{rowcolora}\textbf{Co-founder of Brix3D} \hfill Mars 2016} \\
+\vspace{1.2mm}
+\begin{itemize}
+\item[-] We develop a product where kids would be able to design a 3D objects on their smart-devices and print it right after. The aim is to democratize the 3D printing tools
+\end{itemize}
+\vspace{1.2mm}
+
+\rowcolor{rowcolora}\textbf{Abissa \& World Economic Forum} $\sim$ \textit{IT Technician} \hfill  {Mar. $\triangleright$ Jun. 2016}
+\begin{itemize}
+\item[-]\quad Backup, Data migration, Unblock devices (iOS devices)
+\end{itemize}
+\vspace{2.8mm}
+\rowcolor{rowcolora}\textbf{VINCI-Energies, France} $\sim$ \textit{Intern as Technical manager}\hfill  {Mar. $\triangleright$ Aug. 2013}
+ 
+
+\begin{itemize}
+\item[-]\quad Project definition of an \textit{Enterprise content management} system (to replace Lotus) and technical design specifications
+\item[-]\quad Online deployment and DataBase migration
+\end{itemize}
+
+\vspace{2.8mm}
+\rowcolor{rowcolora}\textbf{Oger International, Saudi Arabia} $\sim$ \textit{Intern as Assistant Engineer} \hfill  {Jun. $\triangleright$ Jul. 2012}
+
+\begin{itemize}
+\item[-]\quad Sensor Installation for an alarm system, VHDL developpement, test \&  validation
+\end{itemize}
+
+\vspace{2.8mm}
+\rowcolor{rowcolora}\textbf{HaririMed, Lebanon} $\sim$ \textit{Backend Web Developer} \hfill  {Jun.  $\triangleright$ Aug. 2011}
+
+\begin{itemize}
+\item[-]\quad  Developpement of 3 UserControl for a web application system for Hospital center in Kuwait 
+and Turkey in ASP.net, VB.net, Javascript and SQL Data Cleaning for the patients database
+\end{itemize}
+\end{tabular}
+}
+\end{table}
+
+
+
+% \clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% >> Activities & Achievements
+% \vspace*{-4mm}
+\begin{table}[H]
+\renewcommand{\arraystretch}{2}
+%\small \vspace{-3.5mm}
+%\resizebox{\columnwidth}{!}{
+\begin{tabular}[t]{ m{180mm}}
+
+\multicolumn{1}{c}{\color{black}\scshape\LARGE\raggedright \textbf{Achievements \& Awards}}\\
+\hline
+
+\authorimg{../icon/medal.eps} 5th Global Entrepreneurship Week Geneva  Award for the best idea of GEW \hfill {2016}
+
+\authorimg{../icon/medal.eps} Winner of the 
+\href{http://www.venturekick.ch/}{{\color{blue}VentureKick.ch}} Competition \hfill {2016}\\
+\vspace{-8mm}
+\authorimg{../icon/favoritesbutton.eps} \textbf{Innovation Park, EPFL}, Lausanne \hfill  {Feb. $\triangleright$ Jun. 2016}\\ 
+\vspace{-7mm}
+Selected at the top of the 25/800 participants for the Business Concept CTI Entrepreneurship Training
+
+\end{tabular}
+%}
+\end{table}
+
+
+
+
+\clearpage
+%\vspace*{-12mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% > Skills
+\begin{table}[H]
+\begin{tabular}[t]{ m{180mm}}
+
+\multicolumn{1}{c}{\color{black}\scshape\LARGE\raggedright \textbf{Skills}} \\ 
+
+\hline
+{\fontsize{8}{10}\selectfont
+\myboxedtext{\LaTeX}
+\myboxedtext{Debate}
+\myboxedtext{Windows \& MS office tools}
+\myboxedtext{Improv}
+
+}
+\end{tabular}
+\end{table}
+
+%\vspace*{-7mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% > Languages
+\begin{table}[H]
+\begin{tabular}[t]{ m{180mm}}
+\multicolumn{1}{c}{\color{black}\scshape\LARGE\raggedright \textbf{Languages}} \\ 
+
+\hline
+\quad French / Arab \hfill Bilingual \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starfullfilled.eps}  \\
+\quad English  \hfill Fluent \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starfullfilled.eps} \authorimg{../icon/starempty.eps} \\
+\quad German \hfill Learning  \authorimg{../icon/halfilledratingstar.eps} \authorimg{../icon/starempty.eps} \authorimg{../icon/starempty.eps} \authorimg{../icon/starempty.eps} \authorimg{../icon/starempty.eps} 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% > Interests 
+\begin{table}[H]
+\begin{tabular}[t]{ m{180mm}}
+
+\multicolumn{1}{c}{\color{black}\scshape\LARGE\raggedright \textbf{Interests}}\\ \hline
+
+Geopolitics, Open Innovation, Blockchain regulation, History, Social Economy. \\
+
+Active member in the \href{http://cms.unige.ch/asso-etud/Club-genevois-de-debat/web/home.html}{\color{blue}{ Club Genevois de débat}}
+\end{tabular}
+\end{table}
+
+
+\rowcolor{rowcolora}\textbf{Volunteer Computing project/ Cern-SDG Summer School} \hfill Geneva / 2017
+\begin{itemize}
+    \item[-] Develop a new strategy to target more users and develop the mockup for the new website of volunteer computing challenge.
+\end{itemize}
+
+\rowcolor{rowcolora}\textbf{CosmicPi project / Cern-SDG Summer School} \hfill Geneva / 2017
+\begin{itemize}
+    \item[-] Team mentor and support with some technical tasks
+\end{itemize}
+
+\rowcolor{rowcolora}\textbf{Hackathon Mentor} \hfill Geneva / 2016
+
+\begin{itemize}
+    \item[-]24/7 access to treatment project  \href{http://www.connect2effect.com/}{\color{blue}{INFLUX TRUST HACKATHON}}
+\end{itemize}
+
+\rowcolor{rowcolora}\textbf{The Port Hackathon at Cern} \hfill Geneva / 2016
+\begin{itemize}
+    \item[-] Create the idea of \href{https://twitter.com/uRegSwitzerland}{\color{blue}{ \faTwitter Personal Health Wallet}}
+    \item[-] Pitched at the open ceremony of \href{http://ghf2016.g2hp.net/}{\color{blue}{Geneva Health Forum}}
+    \item[-] Adopted by Hôpitaux Universitaires de Genève
+\end{itemize}
+
+\vspace{1.2mm}
+
+\rowcolor{rowcolora}\textbf{Other Hackathon I partipated in} \hfill
+
+Hackathons are the best environment to work, to learn, to discover and to keep you motivated to work and not gave up your challenges 
+\begin{itemize}
+\item[-] Concours Open Geneva, Swiss Institute of Bioinformatics, Science Hackathon at Cern  (The idea was Published in CERN Bulletin ), I don't remember the rest :)
+\item[-]  Open Geneva Hackathon in 2016 / Small prototype developed in 3 days
+\href{https://github.com/zeeroday/hackathon-2016}{{\color{blue}Surgery Scenario}}
+\end{itemize}
+
+
+\rowcolor{rowcolora}\textbf{Contribution into :} \hfill
+
+\begin{itemize}
+\item[-] The development of \href{http://opengenevahackathons.org/}{{\color{blue}Open Geneva Hackathon website 2017}}
+\item[-] Developement of the screeps game in Haskell during the ZuriHac 
+and more projects, you can check it on my github account \textbf{zeeroday}
+\end{itemize}
+
+
+
+{\fontsize{10}{10}\selectfont \quad References : 
+
+Dr. \href{https://nordberg.web.cern.ch/nordberg/}{{\color{blue} Markus Nordberg}} \href{mailto:svolos@unige.ch}{\nolinkurl{markus.nordberg@cern.ch}}
+
+Prof. \href{http://cui.unige.ch/~grey/}{{\color{blue}François Grey}}
+\href{mailto:francois.grey@cern.ch }{\nolinkurl{francois.grey@cern.ch}}}
+
+Prof. \href{http://sip.unige.ch/team/prof-sviatoslav-voloshynovskiy/}{{\color{blue}Sviatoslav voloshynovskiy}},
+\href{mailto:svolos@unige.ch}{\nolinkurl{svolos@unige.ch}}
+
+
+
+
+
+
+\end{document}
+

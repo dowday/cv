@@ -1,0 +1,479 @@
+\documentclass[a4paper, 10pt, oneside]{article}
+\usepackage{soul} % Used for the title name (eg. the Elliot John Reed cv title)
+\usepackage{titlesec}
+\usepackage{marvosym} % add the symbols for email and phone contact data
+\usepackage{fancyhdr} % Required for the footer
+\usepackage{tabularx} % Nicer table style than the default
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+\usepackage{fontawesome}
+\definecolor{headings}{HTML}{000000} % Dark red color for headings
+\definecolor{text1}{HTML}{000000} % Main document font color, off-black
+
+\usepackage[none]{hyphenat} % Prevents hyphenation in text
+\usepackage{amsmath}
+
+%% Table related 
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage[first=0,last=9]{lcg}
+\newcommand{\ra}{\rand0.\arabic{rand}}
+
+
+%% Graphics package
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{stfloats}
+\restylefloat{table}
+\usepackage[margin=10mm,bottom=20mm]{geometry}
+\usepackage{array}
+\linespread{1.1} % Line spacing
+\usepackage{geometry}
+\usepackage{changepage}
+\usepackage{array, makecell}
+\usepackage{eurosym}
+\usepackage{soul} % for highlighting colors
+\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{Gray}\hl{#1}}}
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\renewcommand\theadfont{\normalsize\bfseries}
+%\renewcommand{\arraystretch}{1.3
+% Sections formatting
+\titleformat{\section}
+{\fontfamily{qtm}
+	\fontseries{m}\fontshape{n}\selectfont
+	\color{headings}\scshape\huge\centering}{}{0em}{}
+[\vspace*{-0.667\baselineskip}\color{black}\textbf{}
+{\titlerule[2pt]}
+]
+
+%\titleformat{\section}{%
+%	\Large\scshape\raggedright}{}{4.5em}{}%
+%[\vspace*{-0.667\baselineskip}\hspace*{4.5em}\titlerule]
+
+%Title spacing
+\titlespacing*{\section}
+{0pt}{0mm}{2mm}
+
+
+\pagestyle{fancy}
+
+% Prevents overfull hbox and vbox
+\hbadness=10000
+\hfuzz=50pt
+\vbadness=10000
+\vfuzz=50pt
+
+
+% add the symbols for email and phone contact data
+%\fancyhf{}
+%\fancyfoot[c]{\centering\scshape{\renewcommand{\\}{\ {\large\textperiodcentered}\ }Road Name and Number\\City/Town\\Area\\Postcode}\\{\Large\Letter} {email@address.com} \ {\Large\Telefon} {+44 (0)7700 000000}}
+
+\renewcommand\headrulewidth{0pt} % Size of the header rule
+\renewcommand\footrulewidth{0.001pt} % Size of the footer rule
+
+
+\usepackage[pdfborder={0 0 0},bookmarks=true,pdftitle={Oday Darwich's CV},pdfauthor={Oday Darwich},pdfsubject={Curriculum Vitae},pdfcreator={www.zeeroday.ch},pdfproducer={www.zeeroday.ch},]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%  NAME AND CONTACT  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+
+\color{headings}\textsc{\Huge{\so{Oday Darwich}}}, 28 YO, Lebanese, Residence Permit B\\
+\vspace{1mm}
+\color{text1}{\large\Telefon} +41 (0)76 753 9203 
+\hfill {\large\faMapMarker} Cologny/Geneva, 1223 
+\hfill {\large\faEnvelope} \href{mailto:darwichoday@gmail.com}{darwichoday@gmail.com} 
+\hfill \color{text1}{\large\faGithub} \href{https://github.com/zeeroday}{github.com/zeeroday}
+\hfill \faLink{ \href{https://www.linkedin.com/in/oday/}{zeeroday.ch}}
+
+\rule{\textwidth}{2pt}
+
+%%%  Introduction about the offer
+
+\begin{flushleft}
+	\textbf{\fontfamily{qtm}\fontsize{11pt}{11}\selectfont Talent recruitment and acquisition professional }with experience developing 
+\end{flushleft}
+
+%%
+\textbf{\fontfamily{qtm}\fontsize{11pt}{11}\selectfont Diverse Placements}: Performed professional, technical, executive and managerial software developments in areas including:
+
+\fcolorbox{white}{Gray}{
+\begin{minipage}[t]{0.30\textwidth}
+	conceptualization design 
+	
+	e-health systems
+\end{minipage}}
+\space
+\fcolorbox{white}{Gray}{
+\begin{minipage}[t]{0.30\textwidth}
+	Online Collarboration Platforms, Multimedia Security
+\end{minipage}}
+\space
+\fcolorbox{white}{Gray}{
+\begin{minipage}[t]{0.30\textwidth}
+	Full Stack, Data Analysis
+\end{minipage}}
+%\space 
+%\fcolorbox{white}{Gray}{
+%\begin{minipage}[t]{0.30\textwidth}
+%	4 block of text
+%	first block of text
+%\end{minipage}}
+
+\begin{flushleft} 
+	\textbf{\fontfamily{qtm}\fontsize{10pt}{10}\selectfont Software Developement and Management tools:} \texttt{Python, Matlab, VHDL, Jira, BugTracker, ASP.net, VBA, UML, Haskell, Asana, Trello, Emacs}
+\end{flushleft}
+\vspace{-15pt}
+
+%%% Sumary of skills that fit the job offer
+
+%%%% Software Development Skills %%%%%%
+%\section{Software Development Skills}
+%\begin{minipage}[t]{0.5\textwidth}
+%	\vspace{0pt} % Trick for alignment
+%	
+%	\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+%		\textbf{2008 to 2011}    & \textbf{Secretary, LCF} \\
+%		& The Learning Community Forum dealt with student concerns, assisted with staff appointments, and met with lecturers to discuss any issues.
+%	\end{tabularx}
+%	
+%	\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+%		\textbf{2009 to 2011}    & \textbf{Ambassador, UoN} \\
+%		& I presented, talked, and gave advice to prospective students.
+%	\end{tabularx}
+%	
+%\end{minipage} % End left-hand side of the page
+%\hfill
+%% Start the right-hand side of the page
+%\begin{minipage}[t]{0.48\textwidth} 
+%	\vspace{0pt} %trick for alignment
+%	
+%	
+%	\begin{tabularx}{1\linewidth}{>{\raggedright\scshape}p{2cm}X}
+%		\textbf{2008 - 2010}    & \textbf{IT Officer, Theology Society} \\
+%		& I was responsible for organising social events, debates, running the website and social media, and creating promotional materials.
+%	\end{tabularx}
+%	
+%	\begin{tabularx}{1\linewidth}{>{\raggedright\scshape}p{2cm}X}
+%		\textbf{2006 - 2008}    & \textbf{Mentor, Stowupland High School} \\
+%		& I was part of a new project of 'peer mentoring' which assisted students with behavioural problems.
+%	\end{tabularx}
+%	
+%\end{minipage} % End right-hand side of the page
+
+%%%%%%  EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+\floatplacement{figure}{H}
+\section{Professional Experience}%\vspace{-36pt}
+\begin{table}[H]\vspace{-20pt}
+	\begin{adjustwidth}{-.6mm}{-0.5cm}
+		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+		\textbf{\href{https://home.cern/}{European Council for Nuclear Research (CERN)}-/-\href{https://ideasquare.cern/content/about}{IdeaSquare}} & \hfill {\faMapMarker} Geneva, Switzerland, Jan 2018 - Present (2 year 4 months)\hfill \\
+		\textbf{Serial Learner, Deep Tech Innovation, Design Engineer}  & \\
+			\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Research \& Innovation Development:} Designed a novel solution, called \textit{New Alexandria} for collaborative documentation of breakthrough innovations using Distributed Ledger Technology, ML \& Graph Search Algorithms} \\
+			\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Collaboration Establishment:} Established different collaboration with NGOs, Corporations and International organizations, among them a collaboration between Akasha Foundation and CERN IdeaSquare for a \EUR{1} million grant }\\
+			\multicolumn{2}{L{536pt}}{$\bullet$  \textbf{Design and Facilitation Support:} Designed, Organized and Facilitated Senior International Workshop using collective intelligence and Design thinking tools}\\
+			\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Business intelligence analysis:} Co-designed and engineered a 5 year strategy for CERN IdeaSquare}\\ \\
+	\end{tabular}
+
+		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+	\multicolumn{2}{L{536pt}}{
+		\centering{\textbf{\href{https://www.unige.ch/}{University of Geneva}-/-\href{https://www.citizencyberlab.org/}{Citizen CyberLab}  {\space\small\faMapMarker} \small{Geneva, Switzerland}, 2017 to 2019, 35\%, (2 year 2 months)}}} \\
+	\textbf{Reseaerch Assistant and Program Coordinator}  & \\
+					\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Research and Assessment: }{Assessed \& Researched more than 15 online existing documentation platform and surveyed users experiences to find the best way to docuemnt online}} \\
+					\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Reporting \& Analysis:} {Produced a research investigation report and recommendations for future development }} \\ 
+					\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Software Development:} Adapted a collaborative online documentation platform from MIT called \href{www.sdginprogress.com}{SDGinProgress}. I programmed and maintained the code  in  \texttt{\hlcyan{Ruby on Rails, jQuery, JavaScript, PostgresSQL, solr search engine}} } \\ \\
+\end{tabular}
+
+		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+	\multicolumn{2}{L{536pt}}{
+	\centering{\textbf{\href{https://www.ert.com/}{eResearch Technology, Inc.} {\space\small\faMapMarker} \small{Geneva, Switzerland}, 2016 to 2017,  50\%, (1 year 1 month)}}} \\
+
+	\textbf{Software Developer and Project Manager Assistant}  & \\
+	
+	\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Testing, Analysis and Concept Engineering:} Tested, Analysed and reviewed the existing \texttt{Excel VBA} solutio. I also framed the project, collected and the data, \& selected actions based on user needs \& preferences} \\ 	
+	\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Software Development and Team Management:} Build an automatized web app system (MVP)  in collaboration with 2 full stack developers; tested it with users and reported future recommendation for further development} \\ 
+	\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Acquired Skills}: \texttt{Functional Design, UML Modeling, Macro VBA, Python, Django, MySQL, HTML, CSS, JS}} \\ \\
+\end{tabular}
+%\end{adjustwidth}
+%\end{table}
+%\begin{table}[H]
+%	\begin{adjustwidth}{-.6mm}{-0.5cm}
+		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+	\multicolumn{2}{L{536pt}}{
+	\centering{\textbf{\href{https://www.weforum.org/}{World Economic Forum} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Mar 2016 to June 2016, 40\%, (4 months)}}} \\
+
+	\textbf{Data Migration Engineer}  & \\
+	
+	\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Software Development:} Developed and resolved the backup. I restored the data from old systerm and did the data migration for the new iOS system. {\textbf{using the following technologies:} \texttt{Python, MySQL, OS, MS-Office, ATOM IDE)}}} \\ \\
+\end{tabular}
+%\end{adjustwidth}
+%\end{table}
+%\begin{table}[H]
+%	\begin{adjustwidth}{-.6mm}{-0.5cm}
+		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+	\multicolumn{2}{L{536pt}}{
+	\centering{\textbf{\href{https://www.vinci-energies.ch/de/}{VINCI Energies} {\space\small\faMapMarker} \small{Geneva, Switzerland}, Mar 2013 to Aug 2013, Thesis Project (6 months)}}} \\
+	\textbf{Junior Technical Project Manager}  & \\
+	\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Concept Engineering:} Researched and well-conceptualized an Internal Enterprise Content Management web app system that replaced Lotus. I \textbf{collaborated} with a team of full stack web developers to \textbf{develop the solution}. I tested it and \textbf{created} a user friendly tutorials for more than 80 users. I used for the latter, \texttt{VB.net,Jira and SmartSheet}} \\  
+\end{tabular}
+	\end{adjustwidth}
+\end{table}
+
+\section{Internship}%\vspace{-36pt}
+\begin{table}[H]\vspace{-20pt}
+	\begin{adjustwidth}{-.6mm}{-0.5cm}
+		\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+			\multicolumn{2}{L{536pt}}{
+				\centering{\textbf{\href{http://www.ogerinternational.com/}{Oger International} {\space\small\faMapMarker} \small{Jeddah, Saudi Arabia}, Jul 2012 - Sept 2012, Intern,  (3 months)}}} \\
+			\textbf{Industrial Engineering Assistant}  & \\
+			\multicolumn{2}{L{536pt}}{$\bullet$ \textbf{Installed \& programmed} sensor alarm system in VHDL $\star\ast$ Testing and validation using \texttt{VHDL, LabView, Jira} } \\ \\
+		\end{tabular}
+%			\end{adjustwidth}
+%		\end{table}
+%	\begin{table}[H]
+%		\begin{adjustwidth}{-.6mm}{-0.5cm}
+				\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+					\multicolumn{2}{L{536pt}}{
+						\centering{\textbf{\href{https://www.linkedin.com/company/haririmed/about/}{HaririMed} {\space\small\faMapMarker} \small{Beirut, Lebanon}Jun 2011 to Aug 2011, Intern,  (3 months)}}} \\
+					\textbf{Software Developer/Backend }  &  \\
+					\multicolumn{2}{L{550pt}}{$\bullet$ \textbf{Developed} user controls (\texttt{ASP.net, BugTracker}) for a medical center $\star\ast$ \textbf{Data Cleansing} (\texttt{SQL SIS}) for 400k patients} \\  \\
+\end{tabular}
+%\end{adjustwidth}
+%\end{table}
+%\begin{table}[H]
+%	\begin{adjustwidth}{-.6mm}{-0.5cm}
+				\begin{tabular} {>{\raggedright}m{137.3mm} >{\raggedleft\arraybackslash}m{4.5cm}}
+	\multicolumn{2}{L{536pt}}{
+	\centering{\textbf{\href{https://www.cisco.com/}{CISCO} {\space\small\faMapMarker} \small{Tripoli, Lebanon}, Mar 2008 to May 2008, Intern, (3 months)}}} \\
+	\textbf{Trainee} CISCO (Hardware and Software), CISCO (networking), CCNA1, 2 and 3. & \\ \\
+	
+\end{tabular}
+
+\end{adjustwidth}
+\end{table}
+
+%\end{figure}
+%%%%%%  Education  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\begin{table}[H]
+	\begin{adjustwidth}{-.6mm}{-0.5cm}
+		\begin{tabular}
+			{>{\raggedright}m{137.3mm}
+				>{\raggedleft\arraybackslash}m{4.5cm}}
+			\textbf{\href{https://www.univ-littoral.fr/formation/offre-de-formation/masters/master-instrumentation-mesure-metrologie-electronique-et-instrumentation/}{University of the Littoral Opal Coast}} & \hfill Lille, France\\
+			\textbf{\href{https://www.univ-littoral.fr/formation/offre-de-formation/masters/master-instrumentation-mesure-metrologie-electronique-et-instrumentation/}{M.Sc. Electrical  Engineering}}  & August 2014\\
+			$\bullet$ \texttt{\textbf{I mastered}: Coding Matlab, Python, Hardware Dev.(Arduino \& raspberry pi)}\hspace*{-300mm} & \\ \\
+		\end{tabular}
+		
+		\begin{tabular}
+			{>{\raggedright}m{137.3mm}
+				>{\raggedleft\arraybackslash}m{4.5cm}}
+			\textbf{\href{http://tsi.univ-littoral.fr/}{University of the Littoral Opal Coast}} & \hfill Lille, Frace\\
+			\textbf{\href{http://tsi.univ-littoral.fr/}{M.Sc. Industrial Information Technology \& Image Processing}} & August 2013\\
+			$\bullet$ \texttt{\textbf{I mastered}: Coding Matlab, C++, UML Modeling, Data Analysis}\hspace*{-300mm} & \\ \\
+		\end{tabular}
+		\begin{tabular}
+			{>{\raggedright}m{137.3mm}
+				>{\raggedleft\arraybackslash}m{4.5cm}}
+			\textbf{\href{https://iut.ul.edu.lb/ccne.php}{Lebanese University}} & Beirut, Lebanon \\
+			\textbf{\href{https://iut.ul.edu.lb/ccne.php}{B.Sc., Computer \& Communication Networks Engineering}} & August 2012\\
+			$\bullet$ Research: {Submitted a thesis on \textit{Simulation by cellular automata for natural risk management}\hspace*{-200mm} }  &\\
+			$\bullet$ \texttt{\textbf{Aquired Skills in the thesis}: Coding Java, RDBMS, C\#, R.\& Data Analysis, Reporting}\hspace*{-300mm} & \\ \\
+		\end{tabular}
+		
+	\end{adjustwidth}
+\end{table}
+
+% Start the left-hand side of the page
+\begin{minipage}[t]{0.48\textwidth}
+\vspace{0pt} % Trick for alignment
+
+
+%%%%%%  ICT SKILLS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Computer Skills}
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{Legal Software}   & WestLaw, LawTel, LexisNexis \\
+\textbf{Other Software}   & All Microsoft Office programmes, Adobe Suite, \LaTeX, some \textsc{html} \\
+\textbf{Systems}          & Linux, Windows, Mac, Unix \\
+\end{tabularx}
+
+
+\end{minipage} % End left-hand side of the page
+\hfill
+% Start the right-hand side of the page
+\begin{minipage}[t]{0.48\textwidth} 
+\vspace{0pt} %trick for alignment
+
+
+%%%%%%  AWARDS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards and Qualifications} 
+
+\begin{tabularx}{1\linewidth}{>{\raggedright\scshape}p{1cm}X}
+\textbf{2011}    & University Education Network Awards \\
+\textbf{2009}    & First Aid Certification, British Red Cross \\
+\textbf{2008}    & Full UK Driving Licence \\ 
+\textbf{2007}    & 200+ Hours Millennium Volunteer Award \\
+\end{tabularx}
+
+\end{minipage} % End right-hand side of the page
+
+
+%%%%%%  EMPLOYMENT  %%%%%%%%%%%%%%%
+
+\section{Employment}
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2008 to Current} & \textbf{The Mix, University of Nottingham} \\
+Position     & Bar Staff \\
+Duties       & Cash management, some staff training and management, some event planning and management as well as usual bar duties. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2008 -- 2010} & \textbf{The Grange Country House Hotel} \\
+Position     & Supervisor \\
+Duties       & Event planning and management, marketing, advertising, staff management, product management, and cash handling, bar duties and silver service waiting. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2008} & \textbf{PPG Industries (UK) Ltd.} \\
+Position     & Colour Marketing Administration Assistant \\
+Duties       & Database creation and management, communications, administration, and product marketing. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2005 -- 2008} & \textbf{The Coffee House} \\
+Position     & Supervisor \\
+Duties       & I ran and managed the cafe on Sundays. Duties included staff organisation and training, cafe management, stock and cash handling.
+\\ \\
+\end{tabularx}
+
+
+%%%%%%  MEDIATION, DEBATING, ETC.  %%%%%%%%%%%%%%%
+
+\section{Mediation, Debating, Mooting, and Public Speaking}
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2011 to 2012}  & \textbf{GDL Mooting Competition}\\
+                       & I have completed two rounds, both times as Senior Counsel. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2011}         & \textbf{International Chamber of Commerce Mediation Competition}\\
+                      & I completed three rounds of the negotiation contest, bringing me to the semi-finals. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2005 to 2008} & \textbf{Mock Trial Competitions}\\
+                      & At school I participated in the Mock Trial competitions, and went on to train the following team. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2007} & \textbf{Suffolk County Council Budget Competition}\\
+                      & I headed the winning team in the county budgeting competition which involved managing a mock budget and presenting it to the Councillors, and was interviewed in the newspaper and on television. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2003 to 2008} & \textbf{Debating and Public Speaking Competitions}\\
+                      & I participated in school and regional debating and public speaking contests and won a few. \\
+\end{tabularx}
+
+
+
+%%%%%%  PRO BONO WORK  %%%%%%%%%%%%%%%
+
+\section{Pro-Bono and Volunteering Work}
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2011--Present}    & \textbf{StreetLaw} \\
+Description               & I am currently involved in a project that aims to introduce GCSE students to the law. I worked as part of the team to run and manage the employment law workshop. We are now planning to provide similar workshops at school locations. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2008--Present}   & \textbf{British Red Cross, Nottingham} \\
+Role                       & I have created and managed a number of projects in the Nottingham area in support of refugees and asylum seekers as part of a large network and in smaller teams. One particular success was the Life in the UK Citizenship Test course which commenced in 2008. \\
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2011}   & \textbf{Nottingham Law Centre} \\
+Role            & I assisted with employment disputes, particularly discrimination cases. \\
+\end{tabularx}
+
+
+%%%%%%  POSITIONS AND RESPONSIBILITIES  %%%%%%%%%%%
+
+
+% Start the left-hand side of the page
+\section{Positions and Responsibilities}
+
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{0pt} % Trick for alignment
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2008 to 2011}    & \textbf{Secretary, LCF} \\
+                        & The Learning Community Forum dealt with student concerns, assisted with staff appointments, and met with lecturers to discuss any issues.
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedleft\scshape}p{3cm}X}
+\textbf{2009 to 2011}    & \textbf{Ambassador, UoN} \\
+                        & I presented, talked, and gave advice to prospective students.
+\end{tabularx}
+
+\end{minipage} % End left-hand side of the page
+\hfill
+% Start the right-hand side of the page
+\begin{minipage}[t]{0.48\textwidth} 
+\vspace{0pt} %trick for alignment
+
+
+\begin{tabularx}{1\linewidth}{>{\raggedright\scshape}p{2cm}X}
+\textbf{2008 - 2010}    & \textbf{IT Officer, Theology Society} \\
+                        & I was responsible for organising social events, debates, running the website and social media, and creating promotional materials.
+\end{tabularx}
+
+\begin{tabularx}{1\linewidth}{>{\raggedright\scshape}p{2cm}X}
+\textbf{2006 - 2008}    & \textbf{Mentor, Stowupland High School} \\
+                        & I was part of a new project of 'peer mentoring' which assisted students with behavioural problems.
+\end{tabularx}
+
+\end{minipage} % End right-hand side of the page
+
+
+%%%%%%  INTERESTS  %%%%%%%%%%%%%%%
+
+\section{Interests}
+\begin{flushleft}
+I have travelled around Slovakia, Slovenia, Serbia, Hungary, the Czech Republic, France, Belgium, Spain, Holland, Germany, Poland, Italy, Austria, and Croatia. I particularly enjoy visiting Eastern Europe and plan to travel there frequently in the future.
+
+\paragraph*{}
+I am somewhat of a fan of anything technological and enjoy taking computers apart and attempting to put them back together again, occasionally I am even successful in this. I am currently learning some programming (in \textsf{Java}).
+
+\paragraph*{}
+I have achieved many awards in swimming and completed life-saving training. I am also a skilled horse-rider and drive classic and vintage tractors which I occasionally take to shows in Suffolk.
+\end{flushleft}
+
+\section{References}
+\begin{flushleft}
+References can be provided upon request from current and previous employers, and senior academic staff at both the University of Nottingham and Nottingham Law School.
+\end{flushleft}
+
+\end{center}
+\end{document}
